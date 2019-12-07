@@ -14,7 +14,7 @@ npm i grumpydi --save
 import GrumpyDI from "grumpydi";
 ```
 
-### How to us
+### How to use
 
 First of all you need to create new container and define object with your objects in it.
 
