@@ -1,0 +1,20 @@
+{
+  "name": "grumpydi",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": ["DI"],
+  "description": "A simple DI container",
+  "authors": [
+    {
+      "name": "Simon Raichl",
+      "homepage": "https://github.com/velociraptorcze"
+    }
+  ],
+  "devDependencies": {
+    "mocha": "6.2.2",
+    "esm": "3.2.25"
+  },
+  "scripts": {
+    "test": "mocha -r esm test/GrumpyDI.test.js"
+  }
+}
