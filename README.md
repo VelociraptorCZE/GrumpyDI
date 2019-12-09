@@ -31,7 +31,7 @@ Let's implement Example1 and Example2
 ```js
 class Example1 {
     onInit ({ Example2 }) {
-        console.log(Example2.number * 2);
+        console.log((Example2.number + Example2.secondNumber) * 2);
     }
 }
 
@@ -43,9 +43,11 @@ class Example2 {
 }
 ```
 
-As you can see we have in **Example1** method **onInit**.
-This method will be called when all objects have been registered into DI.
-Like in constructor, to **onInit** method is passed DI container.
+### onInit()
+
+We have defined method called **onInit** in **Example1**.
+This method will be called when all objects were registered into DI container.
+To **onInit** method is DI container passed as a parameter likewise in constructor.
 
 On top of that we need to pass parameters to constructor in Example2, so let's change our object a little bit.
 
@@ -70,6 +72,8 @@ GrumpyDI({
     Example2: [Example2, 2, 1]
 });
 ```
+
+### registerObject()
 
 You can add additional object through registerObject function.
 
