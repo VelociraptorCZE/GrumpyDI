@@ -24,7 +24,7 @@ import GrumpyDI from "grumpydi";
 GrumpyDI({ Example1, Example2 });
 ```
 
-DI container pass itself in constructor of all objects, so you can easily destructure it.
+DI container pass itself in onInit function if found in the object, so you can easily destructure it.
 
 Let's implement Example1 and Example2
 
@@ -36,7 +36,7 @@ class Example1 {
 }
 
 class Example2 {
-    constructor (di, number, secondNumber) {
+    constructor (number, secondNumber) {
         this.number = number;
         this.secondNumber = secondNumber;
     }
@@ -47,9 +47,8 @@ class Example2 {
 
 We have defined method called **onInit** in **Example1**.
 This method will be called when all objects were registered into DI container.
-To **onInit** method is DI container passed as a parameter likewise in constructor.
 
-On top of that we need to pass parameters to constructor in Example2, so let's change our object a little bit.
+We need to pass parameters to constructor in Example2, so let's change our object a little bit.
 
 ```js
 import GrumpyDI from "grumpydi";
@@ -61,7 +60,7 @@ class Example1 {
 }
 
 class Example2 {
-    constructor (di, number, secondNumber) {
+    constructor (number, secondNumber) {
         this.number = number;
         this.secondNumber = secondNumber;
     }

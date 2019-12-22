@@ -33,7 +33,7 @@ describe("GrumpyDI test", function () {
     
     it("Create a DI with object which contains parameters passed to constructor", function () {
         const { container } = GrumpyDI({
-            test: [function (_, a, b) {
+            test: [function (a, b) {
                 this.sum = () => a + b;
             }, 2, 2],
             testWithoutParams: [function () {}]

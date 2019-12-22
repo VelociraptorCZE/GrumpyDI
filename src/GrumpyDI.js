@@ -35,9 +35,9 @@ function _registerObject ({ alias, object }) {
 
     if (Array.isArray(object)) {
         const [_object, ...params] = object;
-        this[alias] = new _object(this, ...params);
+        this[alias] = new _object(...params);
     }
     else {
-        this[alias] = new object(this);
+        this[alias] = new object();
     }
 }
